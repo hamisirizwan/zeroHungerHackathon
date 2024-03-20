@@ -1,0 +1,73 @@
+import React from "react";
+import { useGetDonations } from "../../queries/donations";
+
+export default function TableData() {
+  const { data: donations } = useGetDonations();
+  return (
+    <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+            <th scope="col" className="px-6 py-3">
+              Item
+            </th>
+            <th scope="col" className="px-6 py-3">
+              Quantity
+            </th>
+            <th scope="col" className="px-6 py-3">
+              Description
+            </th>
+            <th scope="col" className="px-6 py-3">
+              Donor
+            </th>
+            <th scope="col" className="px-6 py-3">
+              Status
+            </th>
+            <th scope="col" className="px-6 py-3">
+              Action
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {donations &&
+            donations.map((donation) => (
+              <tr
+                key={donation._id}
+                className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b"
+              >
+                <th
+                  scope="row"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  {donation.item}
+                </th>
+                <td className="px-6 py-4">{donation.quantity}</td>
+                <td className="px-6 py-4">{donation.description}</td>
+                <td className="px-6 py-4">{donation.donor}</td>
+                <td className="px-6 py-4">
+                  {donation.status === "taken" && (
+                    <span className="bg-green-600 text-white px-4  rounded-full">
+                      {donation.status}
+                    </span>
+                  )}
+                  {donation.status === "pending" && (
+                    <span className="bg-yellow-600 text-white px-4  rounded-full">
+                      {donation.status}
+                    </span>
+                  )}
+                </td>
+                <td className="px-6 py-4 flex items-center gap-3">
+                  <button className="font-medium text-blue-600 hover:underline">
+                    Edit
+                  </button>
+                  <button className="font-medium text-red-600 hover:underline">
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
