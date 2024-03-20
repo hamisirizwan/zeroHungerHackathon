@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const instance = axios.create({
-  baseURL: "https://ed15-197-232-113-163.ngrok-free.app/api",
+  baseURL: "https://zerohungerhackathon-production.up.railway.app/api",
 });
 
 instance.interceptors.request.use((config) => {
