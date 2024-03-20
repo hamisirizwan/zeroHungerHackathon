@@ -1,5 +1,4 @@
 import React from "react";
-import { useGetDonations } from "../../queries/donations";
 import { useGetReceivedDonations } from "../../queries/received";
 
 export default function ReceivedDonations() {

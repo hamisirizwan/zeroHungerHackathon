@@ -13,7 +13,7 @@ export default function Chatbot() {
     setIsAIThinking(true);
     try {
       setUserInput("");
-      const _ = await instance.post("/chat", {
+       await instance.post("/chat", {
         user_input,
       });
       refetch();
