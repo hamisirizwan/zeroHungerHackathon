@@ -9,7 +9,7 @@ import Dashboard from "./Pages/Dashboard";
 import Chatbot from "./Components/dashboard/Chatbot";
 
 function App() {
-  const user = JSON.parse(localStorage.getItem("user"));
+
   return (
     <main>
       <BrowserRouter>
@@ -27,7 +27,7 @@ function App() {
             }
           />
         </Routes>
-        {user?.user_type === "donor" && <Chatbot />}
+        <Chatbot />
 
         <Toaster richColors closeButton />
       </BrowserRouter>
