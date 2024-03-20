@@ -26,7 +26,7 @@ function Hero() {
             {/* Buttons */}
             <div className="mt-7 grid gap-3 w-full sm:inline-flex">
               <Link
-                className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#4b2114] text-white hover:bg-[#7f3b26] disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#4b2114] text-white hover:bg-[#7f3b26] disabled:opacity-50 disabled:pointer-events-none"
                 to="/signup"
               >
                 Sign up
@@ -55,7 +55,7 @@ function Hero() {
               src={donate}
               alt="Image Description"
             />
-            <div className="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6 dark:from-slate-800 dark:via-slate-900/0 dark:to-slate-900/0" />
+            <div className="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6" />
             {/* SVG*/}
             <div className="absolute bottom-0 start-0">
               <svg

@@ -175,26 +175,26 @@ export default function Chatbot() {
               )}
             </div>
             {/* Search */}
-            <div className="sticky bottom-0 z-10 bg-white border-t border-gray-200 dark:bg-slate-900 dark:border-gray-700 mt-4">
+            <div className="sticky bottom-0 z-10 bg-white border-t border-gray-200 mt-4">
               <div className="max-w-4xl">
                 {/* Input */}
                 <div className="relative">
                   <textarea
-                    className="p-4 pb-12 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                    className="p-4 pb-12 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                     placeholder="Ask me anything..."
                     defaultValue={""}
                     value={user_input}
                     onChange={(e) => setUserInput(e.target.value)}
                   />
                   {/* Toolbar */}
-                  <div className="absolute bottom-px inset-x-px p-2 rounded-b-md bg-white dark:bg-slate-900">
+                  <div className="absolute bottom-px inset-x-px p-2 rounded-b-md bg-white">
                     <div className="flex justify-between items-center">
                       {/* Button Group */}
                       <div className="flex items-center">
                         {/* Mic Button */}
                         <button
                           type="button"
-                          className="inline-flex flex-shrink-0 justify-center items-center size-8 rounded-lg text-gray-500 hover:text-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:hover:text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                          className="inline-flex flex-shrink-0 justify-center items-center size-8 rounded-lg text-gray-500 hover:text-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >
                           <svg
                             className="flex-shrink-0 size-4"
@@ -216,7 +216,7 @@ export default function Chatbot() {
                         {/* Attach Button */}
                         <button
                           type="button"
-                          className="inline-flex flex-shrink-0 justify-center items-center size-8 rounded-lg text-gray-500 hover:text-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:hover:text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                          className="inline-flex flex-shrink-0 justify-center items-center size-8 rounded-lg text-gray-500 hover:text-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >
                           <svg
                             className="flex-shrink-0 size-4"
@@ -241,7 +241,7 @@ export default function Chatbot() {
                         {/* Mic Button */}
                         <button
                           type="button"
-                          className="inline-flex flex-shrink-0 justify-center items-center size-8 rounded-lg text-gray-500 hover:text-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:hover:text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                          className="inline-flex flex-shrink-0 justify-center items-center size-8 rounded-lg text-gray-500 hover:text-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >
                           <svg
                             className="flex-shrink-0 size-4"
@@ -265,7 +265,7 @@ export default function Chatbot() {
                         <button
                           onClick={() => chatWithAI()}
                           type="button"
-                          className="inline-flex flex-shrink-0 justify-center items-center size-8 rounded-lg text-white bg-blue-600 hover:bg-blue-500 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                          className="inline-flex flex-shrink-0 justify-center items-center size-8 rounded-lg text-white bg-blue-600 hover:bg-blue-500 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >
                           <svg
                             className="flex-shrink-0 size-3.5"
